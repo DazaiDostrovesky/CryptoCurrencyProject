@@ -1,24 +1,36 @@
-
-#include <stdio.h>
-#include <curl/curl.h>
 #include <iostream>
 #include <string>
 using namespace std;
-// 
-size_t OutputFeedback(void* recieved_data, size_t size, size_t chunk_size, string* output) {
-size_t  total_size=size*chunk_size;
-output->append((char*)recieved_data, total_size)
-return total_size
-
+string website_api(string coin_address, int chainid) {
+    
+    string url;
+    switch (chainid) {
+    	case 1: {
+    		url = "https://api.etherscan.io/api?module=account&action=balance&address=" + coin_address + "&tag=latest";
+    		
+			break;
+		}
+		case 2:{
+			url =  url = "https://api.etherscan.io/api?module=account&action=balance&address=" + coin_address + "&tag=latest";
+			break;
+		}
+	}
 }
 
-int main(){
-CURL* curl;
-
-
-
+int main()
+{	
+    string	address_coin;
+	cout<<"Please enter coin address: "<<endl;
+	cin>>address_coin;
+	
+	int id;
+	cout<<"Please enter chain id: "<<endl;
+	cin>>id;
+	
+	
+}
 
 
     
-}
+
 
