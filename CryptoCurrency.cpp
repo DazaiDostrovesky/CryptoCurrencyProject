@@ -27,7 +27,7 @@ int main() {
     curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
     curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 1L);
     curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 2L);
-    curl_easy_setopt(curl, CURLOPT_CAINFO, "C:\\cacert.pem");
+    curl_easy_setopt(curl, CURLOPT_CAINFO, "./cacert.pem");
 
    string response;
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, &response);
