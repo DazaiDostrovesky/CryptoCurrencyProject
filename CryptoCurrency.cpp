@@ -12,7 +12,7 @@ size_t WriteCallback(void* contents, size_t size, size_t nmemb, string* data) {
 int main() {
     string input;
     cout << "Enter coin name or contract address: ";
-    cin >> input;  // Simple input without getline
+    cin >> input;  
 
     CURL* curl = curl_easy_init();
     if (!curl) {
